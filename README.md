@@ -24,19 +24,33 @@ Make sure the following commands/tools are installed and available in your syste
 
 ## Setup
 
-1. Obtain an API key from [Mistral AI](https://mistral.ai) and replace the `MISTRAL_API_KEY` variable in the script with your key.
+1. Obtain an API key from [Mistral AI](https://mistral.ai).
+
+2. Set the API key as an environment variable in your shell:
 
 ```bash
-MISTRAL_API_KEY="your_api_key_here"
+export MISTRAL_API_KEY="your_api_key_here"
 ```
 
 ## Usage
 
-Run the script:
+There are two scripts available:
+
+- `smart_screenshot_analyzer_out_number.sh`: Sends the recognized text to Mistral AI and outputs a numeric answer.
+- `smart_screenshot_analyzer_out_text.sh`: Sends the recognized text to Mistral AI and outputs the textual answer.
+
+Run the desired script:
 
 ```bash
-./screenshotOcrtoAI.sh
+./smart_screenshot_analyzer_out_number.sh
 ```
+
+or
+
+```bash
+./smart_screenshot_analyzer_out_text.sh
+```
+./smart_screenshot_analyzer_out_text.sh
 
 The script will:
 
@@ -47,7 +61,6 @@ The script will:
 
 ## Notes
 
-- The AI is instructed to respond only with the number of the correct answer (e.g., 1, 2, 3, etc.) or `0` if no options are detected.
 - The script has a timeout of 5 seconds waiting for the screenshot to appear in the clipboard.
 - Make sure you are running this in a Wayland session as it uses Wayland clipboard utilities.
 
