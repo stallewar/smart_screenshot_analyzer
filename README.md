@@ -50,7 +50,6 @@ or
 ```bash
 ./smart_screenshot_analyzer_out_text.sh
 ```
-./smart_screenshot_analyzer_out_text.sh
 
 The script will:
 
